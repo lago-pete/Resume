@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peter Lagonegro</title>
+<meta name="description" content="Peter Lagonegro - Embedded Systems Engineer. C/C++, ESP32, Linux, real-time sensor systems, IoT firmware.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ctext y='14' font-size='14'%3EP%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<button id="theme-toggle" type="button">dark</button>
+
+<header>
+  <img id="avatar" src="images/profile.jpg" alt="Peter Lagonegro"
+       data-fallback="images/profile" width="88" height="88">
+  <h1>Peter Lagonegro</h1>
+  <p class="subtitle">Embedded Systems Engineer &mdash; C/C++ &middot; ESP32 &middot; Linux &middot; Real-Time Sensor Systems &middot; IoT Firmware</p>
+  <p class="contact">
+    Chandler, AZ &middot;
+    <a href="tel:+15093964465">(509) 396-4465</a> &middot;
+    <a href="mailto:lagonegropeter@gmail.com">lagonegropeter@gmail.com</a> &middot;
+    <a href="https://github.com/lago-pete">github.com/lago-pete</a>
+  </p>
+  <p class="contact">U.S. Citizen &mdash; Eligible for Security Clearance</p>
+</header>
+
+<nav class="tabs">
+  <a href="#projects">Projects</a>
+  <a href="#experience">Work Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#education">Education</a>
+  <a href="#leadership">Leadership</a>
+</nav>
+
+<main>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <h3>RC Flight Telemetry System <span class="date">In progress</span></h3>
+  <p class="meta">C++ &middot; ESP32 &middot; Raspberry Pi 5 &middot; WebSocket &middot; <a href="https://github.com/lago-pete/Aviator">github.com/lago-pete/Aviator</a></p>
+  <ul>
+    <li>Engineered an end-to-end GPS flight-monitoring platform for RC aircraft; an ESP32 airborne node transmits 10 Hz UDP telemetry to a Raspberry Pi 5 ground station over a local wireless access point.</li>
+    <li>Developed C++ firmware aggregating data from four sensors (NEO-M10 GPS, IMU, IST8310 magnetometer, BME680 environmental) over I2C/UART into a packed telemetry data structure.</li>
+    <li>Architected a Raspberry Pi ground station using select()-driven UDP sockets and websocketpp to broadcast real-time JSON telemetry streams to concurrent clients.</li>
+    <li>Building a web dashboard with Leaflet live mapping and custom instrument gauges for field-side flight visualization.</li>
+  </ul>
+  <p class="photos-label">Photos</p>
+  <div class="photos" data-count="3" data-prefix="images/aviator-" data-label="photo"></div>
+
+  <h3>MTX Operating System <span class="date">2025&ndash;2026</span></h3>
+  <p class="meta">C &middot; x86 &middot; <a href="https://github.com/lago-pete/mtx-os">github.com/lago-pete/mtx-os</a></p>
+  <ul>
+    <li>Implemented a core operating system from scratch in C, including process scheduling, context switching, virtual memory, disk I/O, and fork/exec/wait system calls with full parent-child process lifecycle management.</li>
+    <li>Built a dynamic-priority scheduler with configurable time quanta; developed page table construction and address translation routines for kernel-level memory management.</li>
+    <li>Implemented and benchmarked multiple disk-scheduling algorithms (SSTF, SCAN, C-SCAN), analyzing throughput tradeoffs across workloads.</li>
+  </ul>
+
+  <h3>Smart Rack Monitoring Platform <span class="date">2025&ndash;2026</span></h3>
+  <p class="meta">C++ &middot; Node.js &middot; React &middot; <a href="https://sense.telecso.co">sense.telecso.co</a></p>
+  <ul>
+    <li>Programmed ESP32 firmware in C++ interfacing with 3+ sensor types (temperature, humidity, door) via I2C/GPIO; implemented a 1,000-entry local backlog and watchdog fail-safe for unattended, reliable field operation.</li>
+    <li>Designed a Wi-Fi/Ethernet transport layer (LAN8720 PHY) enabling runtime switching between network interfaces across deployment environments.</li>
+    <li>Built a Node.js/Express REST API with 8+ endpoints for sensor ingestion, JWT authentication, and multi-location monitoring; automated ESP32 node registration and deployed via GitHub Actions CI/CD to Linode, with a React/TypeScript dashboard for real-time monitoring.</li>
+  </ul>
+  <p class="photos-label">Photos</p>
+  <div class="photos" data-count="3" data-prefix="images/rack-" data-label="photo"></div>
+</section>
+
+<section id="skills" hidden>
+  <h2>Technical Skills</h2>
+  <p><strong>Languages:</strong> C, C++, Python, JavaScript, SQL</p>
+  <p><strong>Embedded / Firmware:</strong> ESP32, Arduino IDE, I2C, SPI, GPIO, UART, OTA updates, Wi-Fi/Ethernet (LAN8720 PHY), UDP/WebSocket networking, GPS/IMU sensor fusion</p>
+  <p><strong>Systems:</strong> Linux/Unix, x86, process scheduling, context switching, virtual memory, disk I/O, memory management</p>
+  <p><strong>Databases:</strong> MongoDB, PostgreSQL, SQL Server (SSMS/SSIS)</p>
+  <p><strong>Tools:</strong> Git, Docker, Wireshark, GitHub Actions, CI/CD</p>
+</section>
+
+<section id="experience" hidden>
+  <h2>Work Experience</h2>
+
+  <h3>Information Security Intern <span class="date">Baker Boyer National Bank &middot; May&ndash;Aug 2025</span></h3>
+  <ul>
+    <li>Built an automated SSIS ETL pipeline in SQL Server to ingest federal API compliance reports, eliminating manual data entry.</li>
+    <li>Drafted security policies aligned with NIST 800-series standards covering access control, vulnerability management, and incident response.</li>
+  </ul>
+  <div class="photos" data-count="2" data-prefix="images/baker-boyer-" data-label="photo"></div>
+</section>
+
+<section id="education" hidden>
+  <h2>Education</h2>
+  <p>
+    <strong>Washington State University</strong> &mdash; B.S. Computer Science, Minor in Mathematics<br>
+    Pullman, WA &middot; May 2026 &middot; GPA 3.40 &middot; Dean's List (3 semesters)
+  </p>
+</section>
+
+<section id="leadership" hidden>
+  <h2>Leadership</h2>
+  <h3>Founding President <span class="date">Triangle Fraternity, WSU &middot; Feb 2023&ndash;Jan 2024</span></h3>
+  <ul>
+    <li>Founded WSU's first STEM-focused fraternity; grew the chapter from 0 to 40 active members, coordinating recruitment and academic programming.</li>
+  </ul>
+  <div class="photos" data-count="2" data-prefix="images/triangle-" data-label="photo"></div>
+</section>
+
+
+
+</main>
+
+<footer>
+  <p>Source on <a href="https://github.com/lago-pete">GitHub</a>.</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
